@@ -1,0 +1,32 @@
+{
+  "name": "venewo-rewards-subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "auth": "graph auth --product hosted-service $1",
+    "build-mainnet": "graph build --network mainnet",
+    "build-avalanche": "graph build --network avalanche",
+    "deploy-mainnet": "graph deploy --product hosted-service new-order-network/venewo-ethereum --network mainnet",
+    "deploy-avalanche": "graph deploy --product hosted-service new-order-network/venewo-avalanche --network avalanche",
+    "create-local-mainnet": "graph create --node http://localhost:8020/ new-order-network/venewo-ethereum",
+    "remove-local-mainnet": "graph remove --node http://localhost:8020/ new-order-network/venewo-ethereum",
+    "deploy-local-mainnet": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 new-order-network/venewo-ethereum",
+    "create-local-avalanche": "graph create --node http://localhost:8020/ new-order-network/venewo-avalanche",
+    "remove-local-avalanche": "graph remove --node http://localhost:8020/ new-order-network/venewo-avalanche",
+    "deploy-local-avalanche": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 new-order-network/venewo-avalanche",
+    "test": "graph test",
+    "extract": "ts-node --transpileOnly csv_extractor/extractor.ts $1 $2",
+    "extract-test-scripts": "ts-node --transpileOnly query_test_script/query_tests.ts $1 $2"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.49.0",
+    "@graphprotocol/graph-ts": "0.29.1",
+    "csv-writer": "^1.6.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@graphprotocol/client-cli": "^2.2.22",
+    "dotenv": "^16.1.3",
+    "matchstick-as": "0.5.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+build
+generated
+.env
+csv_extractor/outputs/*
+query_test_script/test_outputs/*
+.graphclient
+!csv_extractor/outputs/.gitkeep
+!query_test_script/test_outputs/.gitkeep

@@ -1,0 +1,9 @@
+# .graphclientrc.yml
+sources:
+  - name: ${SUBGRAPH_NAME}
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/new-order-network/${SUBGRAPH_NAME}
+    transforms:
+      - autoPagination:
+          validateSchema: true

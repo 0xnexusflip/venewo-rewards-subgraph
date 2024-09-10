@@ -1,0 +1,14 @@
+{
+  "mainnet": {
+    "VeNewO": {
+      "address": "0x44dd83E0598e7A3709cF0b2e59D3319418068a65",
+      "startBlock": 14966397
+    }
+  },
+  "avalanche": {
+    "VeNewO": {
+      "address": "0x50d4adE79e748CE7CDe7F97b1708364E45421820",
+      "startBlock": 16057018
+    }
+  }
+}

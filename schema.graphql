@@ -1,0 +1,21 @@
+type Factory @entity{
+  id: Bytes!
+  allTimeDeposit: BigInt!
+  allTimeSharesMinted: BigInt!
+  allTimeSharesBurned: BigInt!
+  currentDeposit: BigInt!
+  currentSharesMinted: BigInt!
+}
+
+type User @entity {
+  id: Bytes!
+  allTimeUserDeposit: BigInt!
+  allTimeUserSharesMinted: BigInt!
+  allTimeUserSharesBurned: BigInt!
+  currentUserDeposit: BigInt!
+  currentUserShares: BigInt!
+  lockBlock: BigInt!
+  lockDate: BigInt!
+  unlockDate: BigInt!
+  lockDuration: BigInt!
+}
